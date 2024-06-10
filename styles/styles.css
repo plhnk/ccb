@@ -1,0 +1,49 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+
+.sticky {
+  position: sticky;
+  top: 8dvh;
+}
+
+.main {
+  max-width: 70ch;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.onpage-nav ul {
+  list-style-type: none;
+  position: sticky;
+  padding-left: 0;
+  top: 0;
+}
+
+.onpage-nav ul li {
+  margin-bottom: 1rem;
+}
+
+.onpage-nav ul li a {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.content section {
+  scroll-margin-top: 10dvh;
+}
+
+.onpage-nav a.active {
+  color: #32936F;
+}

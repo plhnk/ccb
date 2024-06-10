@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Church</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <div id="placeholder">Loading...</div>
+    <script src="/scripts/give.js"></script>
+    <script>
+      fetch('/pages/give.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('placeholder').innerHTML = data;
+        })
+        .catch((error) => console.error('Error loading content:', error));
+    </script>
+  </body>
+</html>
