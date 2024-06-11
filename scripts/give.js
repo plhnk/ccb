@@ -29,3 +29,18 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// accordion section
+
+function toggleFAQ(element) {
+    const answerDiv = element.parentElement.nextElementSibling;
+    const icon = element.querySelector('.accordion-icon');
+    
+    if (answerDiv.style.display === "block") {
+        answerDiv.style.display = "none";
+        icon.textContent = "+";
+    } else {
+        answerDiv.style.display = "block";
+        icon.textContent = "–";
+    }
+}

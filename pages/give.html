@@ -1,7 +1,68 @@
 <div class="wrapper">
   <div class="sidebar">
     <div class="sticky">
-      <div class="sidebar-header">// give tile</div>
+      <div class="tile mobile-only">
+        <a
+          class="button"
+          href="https://christchurchbellingham.churchcenter.com/giving?open-in-church-center-modal=true"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-lock"
+          >
+            <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+          Give Securely Online Now
+        </a>
+      </div>
+      <div class="tile featured-tile desktop-only">
+        <div class="tile-header">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" />
+            <path d="M10 19v-3.96 3.15" />
+            <path d="M7 19h5" />
+            <rect width="6" height="10" x="16" y="12" rx="2" />
+          </svg>
+        </div>
+        <div class="tile-content">
+          <h2>Online</h2>
+          <a
+            class="button"
+            href="https://christchurchbellingham.churchcenter.com/giving?open-in-church-center-modal=true"
+            >Give now</a
+          >
+          <p>
+            <em>
+              Email
+              <a
+                style="color: var(--onyx); cursor: pointer"
+                href="mailto:give@ccbh.am"
+                >give@ccbh.am</a
+              >
+              if you have questions or need technical support
+            </em>
+          </p>
+        </div>
+      </div>
       <div class="onpage-nav">
         <ul>
           <li>
@@ -28,9 +89,92 @@
   </div>
   <div class="main">
     <div class="main-header">
-      <div class="tile">mail check</div>
-      <div class="tile">text to give</div>
-      <div class="tile">give in person</div>
+      <div class="tile">
+        <div class="tile-header">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+        </div>
+        <div class="tile-content">
+          <h2>Mail a Check</h2>
+          <address>
+            <p>Christ Church Bellingham</p>
+            <p>
+              2826 Birchwood Ave
+              <br class="desktop-only" />
+              Bellingham, WA 98225
+            </p>
+          </address>
+        </div>
+      </div>
+      <div class="tile">
+        <div class="tile-header">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M3 17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H17L21 23V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17Z"
+            />
+            <path d="M8 10h.01" />
+            <path d="M12 10h.01" />
+            <path d="M16 10h.01" />
+          </svg>
+        </div>
+        <div class="tile-content">
+          <h2>Text to Give</h2>
+          <p>
+            Text any dollar amount (e.g. $5) to <strong>84321</strong> and you
+            will receive personalized setup instructions
+          </p>
+        </div>
+      </div>
+      <div class="tile">
+        <div class="tile-header">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m18 7 4 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9l4-2" />
+            <path d="M14 22v-4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v4" />
+            <path d="M18 22V5l-6-3-6 3v17" />
+            <path d="M12 7v5" />
+            <path d="M10 9h4" />
+          </svg>
+        </div>
+        <div class="tile-content">
+          <h2>Give in Person</h2>
+          <p>
+            Join us on a Sunday morning and give during the offering collection
+          </p>
+          <a href="/visit">Learn about visiting</a>
+        </div>
+      </div>
     </div>
     <div class="give-content">
       <section id="why-give">
@@ -133,8 +277,10 @@
         </h2>
         <h3>
           Stewardship <br />
-          Ensure as much of our tithe as possible goes towards the work of the
-          church.
+          <em>
+            Ensure as much of our tithe as possible goes towards the work of the
+            church.
+          </em>
         </h3>
         <p>
           We are stewards, not owners, of the material blessings God has
@@ -145,7 +291,7 @@
 
         <h3>
           Firstfruits <br />
-          Give of the first portion from our labors.
+          <em> Give of the first portion from our labors. </em>
         </h3>
         <p>
           We are instructed to honor the Lord with the firstfruits of our
@@ -157,7 +303,7 @@
 
         <h3>
           Generosity <br />
-          10% is the baseline, not the ceiling.
+          <em> 10% is the baseline, not the ceiling. </em>
         </h3>
         <p>
           Generous giving is modeled throughout Scripture, flowing from a heart
@@ -167,7 +313,9 @@
 
         <h3>
           Joy <br />
-          Pray that God would fill you and your family with a spirit of joy.
+          <em>
+            Pray that God would fill you and your family with a spirit of joy.
+          </em>
         </h3>
         <p>
           Giving should be done joyfully and voluntarily, not reluctantly or
@@ -301,209 +449,165 @@
         <h2>Frequently Asked Questions</h2>
         <ul class="accordion-items-container">
           <li class="accordion-item">
-            <div
-              class="accordion-divider accordion-divider--top"
-              aria-hidden="true"
-              style="height: 1px; opacity: 1"
-            ></div>
+            <div class="accordion-divider" aria-hidden="true"></div>
 
             <h3>
-              <button>
+              <button onclick="toggleFAQ(this)" class="faq-question">
                 <span>
                   I don’t like sharing my bank credentials; is my financial
                   information secure?
                 </span>
-                <div>+</div>
+                <div class="accordion-icon">+</div>
               </button>
             </h3>
-            <div>
-              <div>
-                <p>
-                  Given the proliferation of online fraud, this is a legitimate
-                  concern. Thankfully, the Church Center app uses Plaid to
-                  safely connect your bank account with the payment processor.
-                  Your credentials are secure with Plaid and are not ever shared
-                  with CCB, the Church Center app, or even the payment
-                  processor.
-                  <a href="https://plaid.com/safety/"
-                    >Learn more on Plaid’s website</a
-                  >.
-                </p>
-              </div>
+            <div class="faq-answer">
+              <p>
+                Given the proliferation of online fraud, this is a legitimate
+                concern. Thankfully, the Church Center app uses Plaid to safely
+                connect your bank account with the payment processor. Your
+                credentials are secure with Plaid and are not ever shared with
+                CCB, the Church Center app, or even the payment processor.
+                <a href="https://plaid.com/safety/"
+                  >Learn more on Plaid’s website</a
+                >.
+              </p>
             </div>
 
-            <div
-              class="accordion-divider"
-              aria-hidden="true"
-              style="height: 1px; opacity: 1"
-            ></div>
+            <div class="accordion-divider" aria-hidden="true"></div>
           </li>
 
           <li class="accordion-item">
             <h3>
-              <button>
+              <button onclick="toggleFAQ(this)" class="faq-question">
                 <span>
                   I prefer putting all my expenses on my credit card for various
                   reasons; why should I consider donating with an ACH bank
                   transfer instead?
                 </span>
-                <div>+</div>
+                <div class="accordion-icon">+</div>
               </button>
             </h3>
-            <div>
-              <div>
-                <p>
-                  We understand the benefits of using a credit card, as it’s a
-                  good way to build credit, get rewards, and age your money!
-                  However the processing fees for credit cards mean fewer of
-                  your dollars make it to the church (about 3%).
-                </p>
-                <p>
-                  Since ACH bank transfers have no processing fees, your whole
-                  tithe is preserved.
-                </p>
-              </div>
+            <div class="faq-answer">
+              <p>
+                We understand the benefits of using a credit card, as it’s a
+                good way to build credit, get rewards, and age your money!
+                However the processing fees for credit cards mean fewer of your
+                dollars make it to the church (about 3%).
+              </p>
+              <p>
+                Since ACH bank transfers have no processing fees, your whole
+                tithe is preserved.
+              </p>
             </div>
 
-            <div
-              class="accordion-divider"
-              aria-hidden="true"
-              style="height: 1px; opacity: 1"
-            ></div>
+            <div class="accordion-divider" aria-hidden="true"></div>
           </li>
 
           <li class="accordion-item">
             <h3>
-              <button>
+              <button onclick="toggleFAQ(this)" class="faq-question">
                 <span>
                   Should I tithe on my gross (pre-tax) or net (what my paycheck
                   is after taxes and deductions) income?
                 </span>
-                <div>+</div>
+                <div class="accordion-icon">+</div>
               </button>
             </h3>
-            <div>
-              <div>
-                <p>
-                  There are many legitimate arguments to be made for either
-                  answer. — we won’t do an exhaustive dive in this FAQ, but we
-                  will say it’s definitely something to pray about, discuss with
-                  your spouse, and seek wise counsel over.
-                </p>
-                <p>
-                  For what it’s worth, many of our church leaders tithe from
-                  their gross income as a means of giving God their firstfruits.
-                </p>
-              </div>
+            <div class="faq-answer">
+              <p>
+                There are many legitimate arguments to be made for either
+                answer. — we won’t do an exhaustive dive in this FAQ, but we
+                will say it’s definitely something to pray about, discuss with
+                your spouse, and seek wise counsel over.
+              </p>
+              <p>
+                For what it’s worth, many of our church leaders tithe from their
+                gross income as a means of giving God their firstfruits.
+              </p>
             </div>
 
-            <div
-              class="accordion-divider"
-              aria-hidden="true"
-              style="height: 1px; opacity: 1"
-            ></div>
+            <div class="accordion-divider" aria-hidden="true"></div>
           </li>
 
           <li class="accordion-item">
             <h3>
-              <button>
+              <button onclick="toggleFAQ(this)" class="faq-question">
                 <span>
                   I prefer writing a check (or putting cash) into the offering
                   bag on Sunday mornings; can I keep doing that?
                 </span>
-                <div>+</div>
+                <div class="accordion-icon">+</div>
               </button>
             </h3>
-            <div>
-              <div>
-                <p>
-                  Of course. The Bible is not overly prescriptive about the mode
-                  of the tithe; we encourage you to faithfully follow the
-                  biblical principles for giving.
-                </p>
-              </div>
+            <div class="faq-answer">
+              <p>
+                Of course. The Bible is not overly prescriptive about the mode
+                of the tithe; we encourage you to faithfully follow the biblical
+                principles for giving.
+              </p>
             </div>
 
-            <div
-              class="accordion-divider"
-              aria-hidden="true"
-              style="height: 1px; opacity: 1"
-            ></div>
+            <div class="accordion-divider" aria-hidden="true"></div>
           </li>
 
           <li class="accordion-item">
             <h3>
-              <button>
+              <button onclick="toggleFAQ(this)" class="faq-question">
                 <span>
                   How can I teach my children about tithing if they don’t see me
                   putting money into the offering bag on Sundays?
                 </span>
-                <div>+</div>
+                <div class="accordion-icon">+</div>
               </button>
             </h3>
-            <div>
-              <div>
-                <p>
-                  While the offering time during a worship service is an
-                  excellent way for you to teach by doing, it is not the only
-                  way! In keeping with Deuteronomy 6, you should be teaching
-                  your children constantly about God’s word. Discussing money
-                  with them outside of the church service is greatly beneficial
-                  for their walk.
-                </p>
-                <p>
-                  One great way to teach young children is to help them divide
-                  up any money they get (birthdays, holidays, etc.) and give a
-                  tithe in the offering on the following Sunday.
-                </p>
-                <p>
-                  If you want them to see you giving but also want to enjoy the
-                  benefits of online giving, you might do the bulk of your
-                  giving online but preserve a portion for in-person.
-                </p>
-              </div>
+            <div class="faq-answer">
+              <p>
+                While the offering time during a worship service is an excellent
+                way for you to teach by doing, it is not the only way! In
+                keeping with Deuteronomy 6, you should be teaching your children
+                constantly about God’s word. Discussing money with them outside
+                of the church service is greatly beneficial for their walk.
+              </p>
+              <p>
+                One great way to teach young children is to help them divide up
+                any money they get (birthdays, holidays, etc.) and give a tithe
+                in the offering on the following Sunday.
+              </p>
+              <p>
+                If you want them to see you giving but also want to enjoy the
+                benefits of online giving, you might do the bulk of your giving
+                online but preserve a portion for in-person.
+              </p>
             </div>
 
-            <div
-              class="accordion-divider"
-              aria-hidden="true"
-              style="height: 1px; opacity: 1"
-            ></div>
+            <div class="accordion-divider" aria-hidden="true"></div>
           </li>
 
           <li class="accordion-item">
             <h3>
-              <button>
+              <button onclick="toggleFAQ(this)" class="faq-question">
                 <span>
                   Giving 10% of my income to the church would put me in a very
                   difficult financial situation; what should I do?
                 </span>
-                <div>+</div>
+                <div class="accordion-icon">+</div>
               </button>
             </h3>
-            <div>
-              <div>
-                <p>
-                  Know that you are not alone, especially in Bellingham where
-                  cost of living has skyrocketed in recent years. At the same
-                  time, God’s word tells us in Malachi 3:8–10 to bring the full
-                  tithe into the storehouse and see if God doesn’t take care of
-                  you!
-                </p>
-                <p>
-                  As a diaconate we would love to come alongside you to pray for
-                  you, help you budget, and connect you with others in the
-                  church who can offer wise counsel based on your specific
-                  context.
-                </p>
-              </div>
+            <div class="faq-answer">
+              <p>
+                Know that you are not alone, especially in Bellingham where cost
+                of living has skyrocketed in recent years. At the same time,
+                God’s word tells us in Malachi 3:8–10 to bring the full tithe
+                into the storehouse and see if God doesn’t take care of you!
+              </p>
+              <p>
+                As a diaconate we would love to come alongside you to pray for
+                you, help you budget, and connect you with others in the church
+                who can offer wise counsel based on your specific context.
+              </p>
             </div>
 
-            <div
-              class="accordion-divider"
-              aria-hidden="true"
-              style="height: 1px; opacity: 1"
-            ></div>
+            <div class="accordion-divider" aria-hidden="true"></div>
           </li>
         </ul>
       </section>
