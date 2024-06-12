@@ -1,0 +1,263 @@
+<script src="https://js.churchcenter.com/modal/v1"></script>
+<!-- Script to allow a `give` parameter to any url so Giving Modal can be shown -->
+<script>
+  // Function to parse parameters from the URL
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  // Check if the parameter 'give' exists in the URL and its value is true
+  var openModalParam = getParameterByName('give');
+  if (openModalParam === 'true') {
+    // Get the URL you want to open in the modal
+    var modalURL =
+      'https://christchurchbellingham.churchcenter.com/giving?open-in-church-center-modal=true';
+
+    // Trigger the opening of the modal with the URL when the page loads
+    window.addEventListener('load', function () {
+      ChurchCenterModal.open(modalURL);
+    });
+  }
+</script>
+
+<script>
+  // Function to parse parameters from the URL
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  // Check if the parameter 'give' exists in the URL and its value is true
+  var openModalParam = getParameterByName('give');
+  if (openModalParam === 'true') {
+    // Get the URL you want to open in the modal
+    var modalURL =
+      'https://christchurchbellingham.churchcenter.com/giving?open-in-church-center-modal=true';
+
+    // Trigger the opening of the modal with the URL when the page loads
+    window.addEventListener('load', function () {
+      ChurchCenterModal.open(modalURL);
+    });
+  }
+</script>
+
+<!-- script to change style on scroll -->
+<script>
+  window.addEventListener('scroll', debounce(handleScroll, 100));
+
+  function handleScroll() {
+    var element = document.getElementById('church-center-button');
+    if (!element) return;
+
+    var scrollTop = window.scrollY;
+    var scrollPosition = window.innerHeight + window.scrollY;
+    var pageHeight = document.body.offsetHeight;
+    var offset;
+
+    // Determine offset based on device type
+    if (isMobileDevice()) {
+      offset = window.innerHeight * 2; // 200vh for mobile
+    } else {
+      offset = window.innerHeight * 0.66; // 66vh for desktop
+    }
+
+    // Check if the user has scrolled down the page
+    if (scrollTop > 100 && scrollPosition < pageHeight - offset) {
+      element.classList.add('scrolled');
+    } else {
+      element.classList.remove('scrolled');
+    }
+  }
+
+  // Function to check if the device is mobile
+  function isMobileDevice() {
+    return (
+      typeof window.orientation !== 'undefined' ||
+      navigator.userAgent.indexOf('IEMobile') !== -1
+    );
+  }
+
+  // Debounce function to limit the rate at which a function can fire
+  function debounce(func, wait) {
+    let timeout;
+    return function () {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, arguments), wait);
+    };
+  }
+</script>
+
+<!-- script for cc-button-main -->
+<style type="text/css" media="screen">
+  :root {
+    --paper: #f9f6ef;
+    --sea: #32936f;
+    --slate: #a8a6a1;
+    --charcoal: #232221;
+    --earth: #54493b;
+    --brand: var(--color-primary);
+    --lavender: #bd9be5;
+    --sky: #74b3ce;
+    --sea: #32936f;
+    --poppy: #dc9a40;
+    --wine: #69140e;
+    --sand: #cbc9ad;
+    --shale: #383839;
+    --forest: #212721;
+    --onyx: #151413;
+    --black: #000000;
+    --color-primary: #f26431;
+    --color-primary-lightest: color-mix(
+      in srgb,
+      var(--color-primary),
+      #fff 80%
+    );
+    --color-primary-lighter: color-mix(in srgb, var(--color-primary), #fff 64%);
+    --color-primary-darker: color-mix(in srgb, var(--color-primary), #000 8%);
+    --color-primary-darkest: color-mix(in srgb, var(--color-primary), #000 12%);
+    --unit-large: 1rem;
+    --unit-base: 0.5rem;
+    --unit-small: 0.25rem;
+    --shadow-base: inset 0 0.1rem 0 0 rgba(255, 255, 255, 0.2),
+      0 0.1rem 0 0 rgba(0, 0, 0, 0.1), inset 0 -0.05rem 0 0 rgba(0, 0, 0, 0.1);
+    --shadow-base-hover: inset 0 0.1rem 0 0 rgba(255, 255, 255, 0.3),
+      0 0.2rem 0.3rem 0 rgba(0, 0, 0, 0.2),
+      inset 0 -0.05rem 0 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .cc-button.scrolled {
+    outline: var(--color-primary-lightest) solid 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(32px);
+    -moz-backdrop-filter: blur(32px);
+    -ms-backdrop-filter: blur(32px);
+    backdrop-filter: blur(32px);
+    color: var(--color-primary--darkest);
+}
+
+.cc-button.scrolled:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .cc-button.scrolled:active {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .cc-button.scrolled > svg {
+    fill: var(--color-primary);
+  }
+  .cc-button.scrolled:hover > svg {
+    fill: var(--color-primary-darker);
+  }
+
+  .cc-button {
+    outline: var(--color-primary-darker) solid 1px;
+    outline-offset: -1px;
+    font-weight: 700;
+    margin-left: auto;
+    background: var(--color-primary);
+    box-shadow: var(--shadow-base);
+    padding: 1em 1.5em;
+    border-radius: var(--unit-base);
+    display: inline-flex;
+    gap: var(--unit-base);
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition:
+      background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out,
+      transform 0.2s ease-in-out;
+  }
+  .cc-button:hover {
+    background-color: var(--color-primary-darker);
+    box-shadow: var(--shadow-base-hover);
+    transform: translateY(-1em);
+    transition: transform 0.3s ease-in-out;
+  }
+  .cc-button:active {
+    background-color: var(--color-primary-darkest);
+    transform: translateY(-0.9em);
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .cc-button svg {
+    fill: var(--color-primary-lighter);
+  }
+  .cc-button svg.cc-icon {
+    vertical-align: text-bottom;
+  }
+  .cc-button svg.cc-external-link {
+    margin-right: 0.2em;
+    vertical-align: middle;
+    transform: translate(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  .cc-button:hover svg.cc-external-link {
+    transform: translate(0.2rem, -0.2rem);
+    transition: transform 0.2s ease-in-out;
+  }
+  .cc-button-wrapper {
+    isolation: isolate;
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cc-button-container {
+    width: 100%;
+    max-width: 1218px;
+    display: flex;
+    padding-bottom: var(--unit-large);
+  }
+  @media screen and (max-width: 1218px) {
+    .cc-button-container {
+      padding: 1rem 4vw;
+    }
+  }
+  @media screen and (max-width: 799px) {
+    .cc-button-container {
+      padding: 1rem 6vw;
+    }
+  }
+</style>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    var mainElement = document.getElementById('page');
+    if (mainElement) {
+      var wrapperDiv = document.createElement('div');
+      wrapperDiv.className = 'cc-button-wrapper';
+
+      var containerDiv = document.createElement('div');
+      containerDiv.className = 'cc-button-container';
+
+      var button = document.createElement('a');
+      button.className = 'cc-button';
+      button.id = 'church-center-button';
+      button.href = 'https://christchurchbellingham.churchcenter.com';
+      button.innerHTML = `    
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="cc-icon"><path d="M12 0C2.405 0 0 2.404 0 12c0 9.597 2.404 12 12 12 9.597 0 12-2.4 12-12S21.6 0 12 0Zm4.701 17.742a.403.403 0 0 1-.398.408l-2.36-.02a.401.401 0 0 1-.408-.398s.006-.278.006-2.167a4.432 4.432 0 0 0-1.54-3.174 4.428 4.428 0 0 0-1.542 3.179c0 1.885.007 2.166.007 2.166a.4.4 0 0 1-.408.398l-2.361.02a.4.4 0 0 1-.398-.408s-.292-7.779-.024-8.011l4.32-3.725a.627.627 0 0 1 .824 0l4.312 3.725h-.005c.267.252-.024 8.007-.024 8.007Z"/></svg>        
+      <span>Join us in Church Center</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" class="cc-external-link"><path d="M11.531 8.727a.73.73 0 0 1-.71.742c-.383 0-.704-.344-.704-.711v-2.89l.14-3.65L8.97 3.68 1.21 11.43a.658.658 0 0 1-.492.21.751.751 0 0 1-.727-.726.71.71 0 0 1 .219-.492l7.742-7.758 1.453-1.273-3.812.125H2.875c-.367 0-.703-.32-.703-.696 0-.375.297-.71.734-.71h7.86c.468 0 .757.312.757.757l.008 7.86Z"/></svg>
+          `;
+      containerDiv.appendChild(button);
+      wrapperDiv.appendChild(containerDiv);
+      mainElement.appendChild(wrapperDiv);
+    }
+  });
+</script>
